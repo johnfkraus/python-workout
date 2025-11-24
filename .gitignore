@@ -3,3 +3,6 @@ htmlcov/*
 htmlcov
 .ipynb_checkpoints
 Untitled*ipynb
+*.log
+**/app.log*
+**/test_log*
