@@ -1,0 +1,11 @@
+data = {
+    "user": {
+        "profile": {
+            "name": "Alice",
+            "details": [
+                {"age": 30, "location": {"city": "Boston"}},
+                {"projects": [{"title": "X"}, {"title": "Y", "city": "Miami"}]}
+            ]
+        }
+    }
+}
