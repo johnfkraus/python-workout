@@ -1,0 +1,130 @@
+{
+  "form_type": "DS-160",
+  "submission_date": "2025-01-15",
+  "application": {
+    "personal_information": {
+      "surname": "DOE",
+      "given_names": "JOHN MICHAEL",
+      "full_name_native_alphabet": null,
+      "other_names_used": [],
+      "sex": "M",
+      "marital_status": "MARRIED",
+      "date_of_birth": "1988-07-14",
+      "city_of_birth": "MANCHESTER",
+      "country_of_birth": "UNITED KINGDOM",
+      "nationality": "UNITED KINGDOM",
+      "other_nationalities": []
+    },
+
+    "passport_information": {
+      "passport_type": "REGULAR",
+      "passport_number": "123456789",
+      "passport_book_number": null,
+      "issuing_country": "UNITED KINGDOM",
+      "issue_date": "2020-06-10",
+      "expiration_date": "2030-06-10",
+      "lost_stolen_passport": false
+    },
+
+    "travel_information": {
+      "purpose_of_trip": "BUSINESS",
+      "visa_class": "B1",
+      "intended_date_of_arrival": "2025-03-17",
+      "intended_length_of_stay_days": 10,
+      "address_in_us": {
+        "street": "200 MAIN ST",
+        "city": "BOSTON",
+        "state": "MA",
+        "zip_code": "02110"
+      },
+      "person_paying_for_trip": "SELF"
+    },
+
+    "us_contact": {
+      "contact_type": "ORGANIZATION",
+      "company_name": "ACME CORPORATION",
+      "relationship": "BUSINESS ASSOCIATE",
+      "address": {
+        "street": "200 MAIN ST",
+        "city": "BOSTON",
+        "state": "MA",
+        "zip_code": "02110"
+      },
+      "phone": "+1-617-555-1234",
+      "email": "info@acmecorp.example"
+    },
+
+    "family_information": {
+      "father": {
+        "surname": "DOE",
+        "given_names": "ROBERT",
+        "date_of_birth": "1959-02-10",
+        "country_of_birth": "UNITED KINGDOM"
+      },
+      "mother": {
+        "surname": "DOE",
+        "given_names": "ELIZABETH",
+        "date_of_birth": "1961-09-22",
+        "country_of_birth": "UNITED KINGDOM"
+      },
+      "spouse": {
+        "surname": "DOE",
+        "given_names": "SARAH",
+        "date_of_birth": "1990-05-04",
+        "nationality": "UNITED KINGDOM",
+        "occupation": "TEACHER"
+      }
+    },
+
+    "address_and_phone": {
+      "home_address": {
+        "street": "12 HIGH STREET",
+        "city": "MANCHESTER",
+        "postal_code": "M2 3HQ",
+        "country": "UNITED KINGDOM"
+      },
+      "mailing_address_same_as_home": true,
+      "primary_phone": "+44-16-1555-2345",
+      "secondary_phone": null,
+      "email": "john.doe@example.com"
+    },
+
+    "work_education": {
+      "primary_occupation": "ENGINEER",
+      "present_employer": {
+        "name": "TECHSERVE LTD",
+        "address": {
+          "street": "50 INNOVATION WAY",
+          "city": "MANCHESTER",
+          "postal_code": "M15 4AA",
+          "country": "UNITED KINGDOM"
+        },
+        "job_title": "SENIOR SYSTEMS ENGINEER",
+        "start_date": "2019-09-01",
+        "monthly_income": "4500 GBP"
+      },
+      "previous_employment": []
+    },
+
+    "security_background": {
+      "medical_conditions": false,
+      "drug_use": false,
+      "criminal_history": false,
+      "immigration_violations": false,
+      "terrorist_activities": false,
+      "export_control_violations": false
+    },
+
+    "previous_us_travel": {
+      "visited_before": true,
+      "visits": [
+        {
+          "arrival_date": "2022-04-15",
+          "length_of_stay_days": 7,
+          "visa_type": "B1/B2"
+        }
+      ],
+      "previous_visa_issues": false
+    }
+  }
+}
