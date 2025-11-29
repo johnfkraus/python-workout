@@ -1,6 +1,6 @@
 import json
 from typing import Any
-from dotmap import DotMap
+# from dotmap import DotMap
 
 def find_key_paths(data: Any, target_key: str|int|float):
     """
@@ -62,28 +62,29 @@ data0 = {
 
 
 
-data1 = {
-    "user": {
-        "profile": {
-            "name": "Alice",
-            "details": {
-                "bo": [[
-                {"age": 30, "location": {"city": "Boston"}},
-                {"projects": [{"title": "X"}, {"title": "Y", "city": "Miami"}]}
-            ]]}
-        }
-    }
-}
 
 
 def main():
     func_no = 1
     match func_no:
         case 1:
+            data1 = {
+                "user": {
+                    "profile": {
+                        "name": "Alice",
+                        "details": {
+                            "bo": [[
+                                {"age": 30, "location": {"city": "Boston"}},
+                                {"projects": [{"title": "X"}, {"title": "Y", "city": "Miami"}]}
+                            ]]}
+                    }
+                }
+            }
             results = find_key_paths(data1, "city")
             print(results)
             assert data1['user']['profile']['details']['bo'][0][0]['location']['city'] == "Boston"
-            assert data1['user']['profile']['details']['bo'][0][1]['projects'][1]['city'] == "Miami"
+            print(f"{data1['user']['profile']['details']['bo'][0][0]['location']['city'] == 'Boston'=}")
+            print(f"{data1['user']['profile']['details']['bo'][0][1]['projects'][1]['city'] == 'Miami'=}")
 
         case 2:
             with open("users.json") as file:
