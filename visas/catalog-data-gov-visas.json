@@ -1,0 +1,40 @@
+{
+  "@type": "dcat:Dataset",
+  "accessLevel": "public",
+  "bureauCode": [
+    "014:00"
+  ],
+  "contactPoint": {
+    "@type": "vcard:Contact",
+    "fn": "Lewis, Lorraine",
+    "hasEmail": "mailto:LewisLL@state.gov"
+  },
+  "description": "This dataset shows the number of nonimmigrant visa issuances organized by visa category (including dependent categories) and nationality for Fiscal Years 1997-2014.",
+  "distribution": [
+    {
+      "@type": "dcat:Distribution",
+      "downloadURL": "https://travel.state.gov/content/dam/visas/Statistics/Non-Immigrant-Statistics/NIVDetailTables/FYs97-14_NIVDetailTable.xls",
+      "mediaType": "text/html"
+    },
+    {
+      "@type": "dcat:Distribution",
+      "accessURL": "https://travel.state.gov/content/visas/en/law-and-policy/statistics/non-immigrant-visas.html",
+      "format": "XLS"
+    }
+  ],
+  "identifier": "100755",
+  "keyword": [
+    "-"
+  ],
+  "modified": "2016-03-01",
+  "programCode": [
+    "014:003"
+  ],
+  "publisher": {
+    "@type": "org:Organization",
+    "name": "U.S. Department of State"
+  },
+  "spatial": "World",
+  "temporal": "1997-01-01T00:00:01Z/2014-12-31T23:59:59Z",
+  "title": "Nonimmigrant Visa Issuances by Visa Category and by Nationality for Fiscal Years 1997-2014"
+}

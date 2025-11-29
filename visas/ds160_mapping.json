@@ -1,0 +1,151 @@
+{
+  "mappings": {
+    "properties": {
+      "application_id": {
+        "type": "keyword"
+      },
+      "form_type": {
+        "type": "keyword"
+      },
+      "submission_date": {
+        "type": "date"
+      },
+      "personal_information": {
+        "properties": {
+          "surname": {
+            "type": "keyword"
+          },
+          "given_names": {
+            "type": "text"
+          },
+          "date_of_birth": {
+            "type": "date"
+          },
+          "nationality": {
+            "type": "keyword"
+          }
+        }
+      },
+      "passport_information": {
+        "properties": {
+          "passport_number": {
+            "type": "keyword"
+          },
+          "issuing_country": {
+            "type": "keyword"
+          },
+          "issue_date": {
+            "type": "date"
+          },
+          "expiration_date": {
+            "type": "date"
+          }
+        }
+      },
+      "travel_information": {
+        "properties": {
+          "purpose_of_trip": {
+            "type": "keyword"
+          },
+          "visa_class": {
+            "type": "keyword"
+          },
+          "intended_date_of_arrival": {
+            "type": "date"
+          },
+          "intended_length_of_stay_days": {
+            "type": "integer"
+          },
+          "address_in_us": {
+            "properties": {
+              "city": {
+                "type": "keyword"
+              },
+              "state": {
+                "type": "keyword"
+              },
+              "zip_code": {
+                "type": "keyword"
+              }
+            }
+          }
+        }
+      },
+      "work_education": {
+        "properties": {
+          "primary_occupation": {
+            "type": "keyword"
+          },
+          "present_employer": {
+            "properties": {
+              "name": {
+                "type": "keyword"
+              },
+              "job_title": {
+                "type": "keyword"
+              },
+              "start_date": {
+                "type": "date"
+              },
+              "monthly_income": {
+                "type": "keyword"
+              }
+            }
+          },
+          "employment_history": {
+            "type": "nested",
+            "properties": {
+              "employer_name": {
+                "type": "keyword"
+              },
+              "job_title": {
+                "type": "keyword"
+              },
+              "start_date": {
+                "type": "date"
+              },
+              "end_date": {
+                "type": "date"
+              },
+              "address": {
+                "properties": {
+                  "city": {
+                    "type": "keyword"
+                  },
+                  "country": {
+                    "type": "keyword"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "previous_us_travel": {
+        "properties": {
+          "visited_before": {
+            "type": "boolean"
+          },
+          "visits": {
+            "type": "nested",
+            "properties": {
+              "arrival_date": {
+                "type": "date"
+              },
+              "length_of_stay_days": {
+                "type": "integer"
+              },
+              "visa_type": {
+                "type": "keyword"
+              }
+            }
+          }
+        }
+      },
+      "testing_nested": {
+        "type": "object",
+        "enabled": true
+      }
+    }
+  }
+}
