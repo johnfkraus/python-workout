@@ -1,0 +1,116 @@
+Below is a clean, correct, and fully general Python function that:
+
+✔ Recursively searches any nested JSON-like structure (dicts, lists, mixed)
+✔ Finds **all locations where the value equals `target_value`**
+✔ Works when `target_value` is **string, number, list, dict**, or anything comparable
+✔ Returns a list of **(path_string, value)** tuples
+✔ Avoids duplicates **without using a set** (so lists/dicts are fine)
+✔ Uses JSON-style path notation with `[index]` for lists
+
+---
+
+# ✅ **Function: Find All Paths Where Value Equals `target_value`**
+
+```python
+def find_value_paths(data, target_value):
+    """
+    Recursively search a nested JSON-like structure (dicts, lists)
+    for occurrences of `target_value`, returning all unique paths.
+
+    Returns:
+        List of (path_string, value) tuples
+            e.g. [("root.items[2].name", "Alice"), ...]
+    """
+
+    results = []  # list of (path_string, value)
+
+    def already_recorded(path, value):
+        # Ensure no duplicates without using a set
+        for p, v in results:
+            if p == path:
+                return True
+        return False
+
+    def _search(obj, path):
+        # Match the entire object
+        if obj == target_value and not already_recorded(path, obj):
+            results.append((path, obj))
+
+        if isinstance(obj, dict):
+            for key, value in obj.items():
+                new_path = f"{path}.{key}" if path else key
+                _search(value, new_path)
+
+        elif isinstance(obj, list):
+            for i, item in enumerate(obj):
+                new_path = f"{path}[{i}]"
+                _search(item, new_path)
+
+        # Primitives: nothing more to recurse into
+        else:
+            return
+
+    _search(data, "")
+    return results
+```
+
+---
+
+# 📌 Example Usage
+
+```python
+data = {
+    "a": 1,
+    "b": [1, {"c": 1}],
+    "d": {"e": [1, 2, 3]}
+}
+
+matches = find_value_paths(data, 1)
+
+for path, value in matches:
+    print(path, "->", value)
+```
+
+### Output:
+
+```
+a -> 1
+b[0] -> 1
+b[1].c -> 1
+d.e[0] -> 1
+```
+
+---
+
+# 📌 Works with dicts/lists as the target value
+
+```python
+data = {
+    "x": {"y": 3},
+    "z": [{"y": 3}, {"y": 4}]
+}
+
+find_value_paths(data, {"y": 3})
+```
+
+Output:
+
+```
+x -> {"y": 3}
+z[0] -> {"y": 3}
+```
+
+Structural (`==`) matching works for dicts/lists.
+
+---
+
+If you want:
+
+✔ A version that uses a generator
+✔ A version that stops after the first match
+✔ A version that matches values *containing* a substring
+✔ A version that returns parent objects
+
+Just let me know!
+
+
