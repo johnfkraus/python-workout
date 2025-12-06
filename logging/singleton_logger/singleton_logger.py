@@ -1,25 +1,3 @@
-
-
-logging module for CiTAC code.
-
-Logs to both stdout and file.
-
-
-In Python 3.11+, I want code for a logger.  The logger should write to both the terminal and to a log file.  The logger should autorotate log files daily.  The logger should be a singleton.  The example code should include a main() method that demonstrates how to use the logger.
-
-
-Below is a clean, Python-3.11-compatible example of a **singleton logger** that:
-
-✔ Logs to **both terminal and a file**
-✔ **Auto-rotates daily** (using `TimedRotatingFileHandler`)
-✔ Ensures **only one logger instance** exists
-✔ Includes a **main() demo**
-
----
-
-# ✅ `logger_singleton.py`
-
-```python
 import logging
 from logging.handlers import TimedRotatingFileHandler
 from pathlib import Path
@@ -101,26 +79,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-```
-
----
-
-# ✔ How It Works
-
-### **Singleton behavior**
-
-* `SingletonLogger.get_logger()` ensures the logger is created **once**, even across threads.
-
-### **Auto-rotating log file**
-
-* A new file is created **every midnight**.
-* By default, it keeps **7 old logs** (change via `backupCount`).
-
-### **Dual output**
-
-* `StreamHandler` → prints to terminal
-* `TimedRotatingFileHandler` → writes to daily log files
-
----
-
-If you want enhancements (colored terminal output, async logging, JSON logs, etc.), just let me know!
