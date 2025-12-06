@@ -36,3 +36,12 @@ Use dataclasses for structured date.
 23:10 Step 8 – Add Logging Instead of Print
 24:10 Step 9 – Add a Main Function
 25:56 Final Thoughts
+
+
+
+
+More:
+
+Rename master branch to main:
+
+git branch -m master main - git push -u origin main
