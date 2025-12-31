@@ -3,6 +3,13 @@ htmlcov/*
 htmlcov
 .ipynb_checkpoints
 Untitled*ipynb
-*.log
+**/*.log
 **/app.log*
 **/test_log*
+**/*.zip
+*.csv
+logapp.egg-info
+myapp.egg-info
+**/.idea
+.idea
+

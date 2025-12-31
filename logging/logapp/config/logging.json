@@ -1,0 +1,16 @@
+{
+  "logfile": {
+    "directory": "logs",
+    "filename": "app.log",
+    "rotate_when": "midnight",
+    "backup_count": 7
+  },
+  "console": {
+    "level": "INFO"
+  },
+  "file": {
+    "level": "DEBUG"
+  }
+}
+
+

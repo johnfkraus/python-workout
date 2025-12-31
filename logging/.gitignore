@@ -1,5 +1,6 @@
 **/*app.log*
 *.csv
-
 *.log
+logapp.egg-info
+myapp.egg-info
 
